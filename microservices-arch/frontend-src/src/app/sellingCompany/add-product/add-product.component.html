@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="add-product.component.css">
+       
+    </head>
+    <body>
+
+        <p class="text-center text-white" style="font-size: 0.7cm;">Add product</p>
+        <div class="container">
+            <div class="container form bg-white ">
+                                                            <!--change after click on sign up-->
+               
+                <div class="container hide-me">
+                    <div class="row">
+                        <div class="col ">
+                            <p class="username">Product name</p>
+                            <div class="row">
+                                <div class="col-2 text-center ">
+                                    <i class="fa fa-user-o" aria-hidden="true" id="name"></i>
+                                </div>
+                                <div class="col-10 ">
+                                    <input class='input-1' placeholder ="product name" name="name" [(ngModel)]="product.name"  required>
+                                </div>
+                            </div>
+                            <hr class="hr-1">
+                            <div class="hide"></div>
+                        </div> 
+                    </div>
+            <div class="container hide-me">
+                        <div class="row">
+                            <div class="col ">
+                                <p class="username">Product image</p>
+                                <div class="row ">
+                                    <div class="col-2 text-center ">
+                                        <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                    </div>
+                                    <div class="col-10 ">
+                                          <input class='input-1' placeholder ="product image" name="image" [(ngModel)]="product.image"  required>
+                                    </div>
+                                </div>
+                                <hr class="hr-1">
+                                <div class="hide"></div>
+                            </div> 
+                        </div>    
+
+                        <div class="container hide-me">
+                        <div class="row">
+                            <div class="col ">
+                                <p class="username">Product price</p>
+                                <div class="row ">
+                                    <div class="col-2 text-center ">
+                                        <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                    </div>
+                                    <div class="col-10 ">
+                                          <input class='input-1' placeholder ="product price" name="price" [(ngModel)]="product.price"  required>
+                                    </div>
+                                </div>
+                                <hr class="hr-1">
+                                <div class="hide"></div>
+                            </div> 
+                        </div> 
+                    <div class="row">
+                        <div class="col">
+                            <p class="username">Product quantity</p>
+                            <div class="row ">
+                                <div class="col-2 text-center">
+                                    <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                </div>
+                                <div class="col-10 ">
+                                    <input class='input-1' placeholder ="product quantity" name="quantity" [(ngModel)]="product.quantity"  required>
+                                </div>
+                            </div>
+                                <hr class="hr-1">
+                                <div class="hide"></div>
+                            </div>
+                        </div> 
+                            <button (click)="saveproduct()"  class="btn btn-block text-white login-button"  >add product</button>
+                        
+                        
+                        <div *ngIf="submitted">
+                            <h4>customer was added successfully!</h4>
+                            <button class="btn btn-block text-white loginn-button" (click)="newproduct()">Add</button>
+                          </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+       
+    </div>
+
+        <input type="submit" value= "home" class="loginn-button " (click)="goToHome()">
+    </body>
+</html>

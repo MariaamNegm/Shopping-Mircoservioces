@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="register.component.css">
+        <script src="JS_files/login-form.js"></script>
+    </head>
+    <body>
+        <div><p class="head">customer register</p></div>
+        <div class="container">
+            <div class="container form bg-white">
+                                                            <!--change after click on sign up-->
+                <div class="container hide-me">
+                    <div class="row">
+                        <div class="col mt-4 pl-5 pr-5">
+                            <p class="username">username</p>
+                            <div class="row mt-4">
+                                <div class="col-2 text-center pt-1 pr-0">
+                                    <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                </div>
+                                
+                                <div class="col-10 pl-0">
+                                   <!--<input type="text" placeholder="enter company name" class='input-1'> -->
+                                    <input class='input-1' type="text" placeholder="enter username" name="username" [(ngModel)]="customer.username" required>
+                                    <hr class="hr-1">
+                                  </div>
+                                </div>
+                                  <!--mkjnbhgvfcgvbhjnkm-->
+
+                                  <p class="username">password</p>
+                                  <div class="row mt-4">
+                                      <div class="col-2 text-center pt-1 pr-0">
+                                          <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                      </div>
+                                      
+                                      <div class="col-10 pl-0">
+                                         <!--<input type="text" placeholder="enter company name" class='input-1'> -->
+                                          <input class='input-1' type="text" placeholder="enter password" name="password" [(ngModel)]="customer.password" required>
+                                          <hr class="hr-1">
+                                        </div>
+                                    </div>
+
+                                        <p class="username">location</p>
+                                        <div class="row mt-4">
+                                            <div class="col-2 text-center pt-1 pr-0">
+                                                <i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+                                            </div>
+                                            
+                                            <div class="col-10 pl-0">
+                                                <input class='input-1' type="text" placeholder="enter location" name="location" [(ngModel)]="customer.location" required>
+                                                <hr class="hr-1">
+                                              </div>
+
+                                  <a routerLink="/login" ><button (click)="savecustomer()" >register</button></a>
+                                  <a routerLink="/login" ><button>login</button></a>
+                                </div>
+                            
+                            <div *ngIf="submitted">
+                                <h4>customer was added successfully!</h4>
+                                <button class="btn btn-success" (click)="newcustomer()">Add</button>
+                              </div>
+                            
+                            <div class="hide"></div>
+                        </div> 
+                    </div>
+                    </div>
+                </div>
+        </div>
+        
+    </body>
+</html>
+
